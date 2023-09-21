@@ -12,16 +12,14 @@ body{
 
 .light {
     color: rgb(0, 0, 0);
+    transition: 100ms;
 
     .title{
+        transition: 300ms;
         background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 85%), url('image/angkaew-day.jpg') center center/cover;
 
-        .bluebox{
-            background-color: #90E4FF;
-        }
-        .blueboxlight{
-            background-color: #BEEEF9;
-        }
+        .bluebox{ background-color: #90E4FF; }
+        .blueboxlight{ background-color: #BEEEF9; }
         .titlebluebottom1{ background-color: #C1E8F0; }
         .titlebluebottom2{ background-color: #C0D6DB; }
         .titlebluebottom3{ background-color: #BEEEF9; }
@@ -33,7 +31,11 @@ body{
         .titlegreenbottom5{ background-color: #A0DB9F; }
         .titlegreenbottom6{ background-color: #31BE7B; }
     }
+    .title * {
+        transition: 300ms;
+    }
     .body{
+        transition: 300ms;
         background-color: rgb(207, 249, 255);
         height: 100vh;
     }
@@ -41,18 +43,20 @@ body{
 
 .dark {
     color: rgb(255, 255, 255);
+    transition: 100ms;
 
     .title{
+        transition: 300ms;
         background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 85%), url('image/angkaew-night.jpg') center center/cover;
         
-        .bluebox{
-            background-color: #002e3d;
-        }
-        .blueboxlight{
-            background-color: #001114;
-        }
+        .bluebox{ background-color: #002e3d; }
+        .blueboxlight{ background-color: #001114; }
+    }
+    .title * {
+        transition: 300ms;
     }
     .body{
+        transition: 300ms;
         background-color: black;
         height: 100vh;
     }
