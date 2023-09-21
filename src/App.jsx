@@ -1,22 +1,31 @@
-import { useState } from 'react'
-// import 'bootstrap/dist/css/bootstrap.css';
+import { useState, useEffect } from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+
+import Title from './components/title';
 import './css/global.scss'
-import './App.css'
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [language, setLanguage] = useState('TH');
+  // useEffect=()=>{
+  //   sessionStorage.get
+  // }
+
   const switchTheme = () => {
     setTheme(theme=='light'?'dark':'light');
+  }
+  const switchLanguage = () => {
+    setLanguage(language=='TH'?'EN':'TH');
   }
 
   return (
     <>
-      <div className={theme}>
-        <div className='test'>
+      <div className={`${theme}`}>
+        <Title switchTheme={switchTheme} switchLanguage={switchLanguage}  theme={theme} language={language}/>
+        <div className='body'>
 
         </div>
       </div>
-      <button onClick={switchTheme}></button>
     </>
   )
 }

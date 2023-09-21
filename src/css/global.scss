@@ -1,18 +1,59 @@
-   
-.light {
-    .test {
-        width: 100px;
-        height: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 
-        background-color: yellow;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mitr', sans-serif;
+}
+
+.absolute{
+    // position: absolute;
+}
+
+.light {
+    color: rgb(0, 0, 0);
+
+    .title{
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 85%), url('image/angkaew-day.jpg') center center/cover;
+
+        .bluebox{
+            background-color: #90E4FF;
+        }
+        .blueboxlight{
+            background-color: #BEEEF9;
+        }
+        .titlebluebottom1{ background-color: #C1E8F0; }
+        .titlebluebottom2{ background-color: #C0D6DB; }
+        .titlebluebottom3{ background-color: #BEEEF9; }
+        .titlebluebottom4{ background-color: #BCDCE3; }
+        .titlegreenbottom1{ background-color: #91F0C3; }
+        .titlegreenbottom2{ background-color: #5AD298; }
+        .titlegreenbottom3{ background-color: #81E77F; }
+        .titlegreenbottom4{ background-color: #8BDBB5; }
+        .titlegreenbottom5{ background-color: #A0DB9F; }
+        .titlegreenbottom6{ background-color: #31BE7B; }
+    }
+    .body{
+        background-color: rgb(207, 249, 255);
+        height: 100vh;
     }
 }
 
 .dark {
-    .test {
-        width: 100px;
-        height: 200px;
+    color: rgb(255, 255, 255);
 
-        background-color: rgb(43, 0, 92);
+    .title{
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 85%), url('image/angkaew-night.jpg') center center/cover;
+        
+        .bluebox{
+            background-color: #002e3d;
+        }
+        .blueboxlight{
+            background-color: #001114;
+        }
+    }
+    .body{
+        background-color: black;
+        height: 100vh;
     }
 }
