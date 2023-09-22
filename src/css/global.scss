@@ -42,6 +42,7 @@ body{
 .light {
     color: rgb(0, 0, 0);
     transition: 100ms;
+    overflow-x: hidden;
 
     .title{
         transition: 300ms;
@@ -59,13 +60,23 @@ body{
         .titlegreenbottom4{ background-color: #81E77F; }
         .titlegreenbottom5{ background-color: #A0DB9F; }
         .titlegreenbottom6{ background-color: #31BE7B; }
+        
+        .titlegreenbottom7{ background-color: #5EC05C; }
+        .titlegreenbottom8{ background-color: #75DE73; }
+        .titlegreenbottom9{ background-color: #5BD375; }
+        .titlegreenbottom10{ background-color: #40BE3E; }
+        .titlegreenbottom11{ background-color: #49A700; }
+        .titlegreenbottom12{ background-color: #006F2C; }
+        .titlegreenbottom13{ background-color: #1D6F00; }
+        .titlegreenbottom14{ background-color: #165300; }
+        .titlegreenbottom15{ background-color: #3C8E1F; }
 
-        *, * *{
-            // transition: color 50ms;
-        }
+        // *, * *{
+        //     // transition: color 50ms;
+        // }
     }
     .title_bottom{
-        background: linear-gradient(160deg, rgb(207, 249, 255) 50%, rgb(255, 228, 179) 60%);
+        background: linear-gradient(170deg, rgb(207, 249, 255) 40%, rgb(255, 228, 179) 60%);
         height: max-content;
 
         .fruitset{
@@ -102,6 +113,16 @@ body{
         .titlegreenbottom4{ background-color: #012f00; }
         .titlegreenbottom5{ background-color: #174217; }
         .titlegreenbottom6{ background-color: #006d38; }
+
+        .titlegreenbottom7{ background-color: #172517; }
+        .titlegreenbottom8{ background-color: #079f04; }
+        .titlegreenbottom9{ background-color: #314400; }
+        .titlegreenbottom10{ background-color: #0e5c0d; }
+        .titlegreenbottom11{ background-color: #49A700; }
+        .titlegreenbottom12{ background-color: #006F2C; }
+        .titlegreenbottom13{ background-color: #1D6F00; }
+        .titlegreenbottom14{ background-color: #165300; }
+        .titlegreenbottom15{ background-color: #3C8E1F; }
 
         *, * *{
             // transition: color 50ms;

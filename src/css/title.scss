@@ -5,6 +5,7 @@
 
     .blueboxlight{
         bottom: 50px;
+        width: 180px;
         position: relative;
 
         display: flex;
@@ -27,7 +28,7 @@
 
     .namebox{
         text-align: end;
-        margin-right: 50px;
+        margin-right: 3vw;
         h1{
             font-size: clamp(40px, 6.6vw, 999px);
             letter-spacing: 2px;

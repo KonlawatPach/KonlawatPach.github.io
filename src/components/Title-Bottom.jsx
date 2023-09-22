@@ -24,6 +24,7 @@ function Title_Bottom(props) {
                 <div className='fruit5 fruit' style={{width: '5vw', height: '5vw', right: '52vw', bottom: '104vw'}}></div>
             </div>
             
+            <h4>WELCOME</h4>
             <div className="fence">
                 {result.map((index) => (
                     <div>
