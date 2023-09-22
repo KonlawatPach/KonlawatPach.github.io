@@ -29,13 +29,19 @@
         text-align: end;
         margin-right: 50px;
         h1{
-            font-size: 80px;
+            font-size: clamp(40px, 6.6vw, 999px);
             letter-spacing: 2px;
         }
     }
 
-    .boxbottom{
-        position: relative;
+    .bottomBox{
+        margin-top: 10vw;
+        width: 100vw;
+
+        .boxbottom{
+            position: relative;
+        }
+        
     }
 }
 

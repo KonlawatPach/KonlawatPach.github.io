@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 
+//all style css
 body{
     margin: 0;
     padding: 0;
     font-family: 'Mitr', sans-serif;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -16,29 +18,51 @@ body{
 }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
+.hiddenr{
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(5px);
+    transition: transform 1s;
+}
+.hiddenl{
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: transform 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+    transition: transform 1s;
+}
+
+
+//change per theme
 .light {
     color: rgb(0, 0, 0);
     transition: 100ms;
 
     .title{
         transition: 300ms;
-        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 85%), url('image/angkaew-day.jpg') center center/cover;
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 75%), url('image/angkaew-day.jpg') center center/cover;
 
         .bluebox{ background-color: #90E4FF; }
         .blueboxlight{ background-color: #BEEEF9; }
-        .titlebluebottom1{ background-color: #C1E8F0; }
+        .titlebluebottom1{ background-color: #e9fbff; }
         .titlebluebottom2{ background-color: #C0D6DB; }
         .titlebluebottom3{ background-color: #BEEEF9; }
         .titlebluebottom4{ background-color: #BCDCE3; }
         .titlegreenbottom1{ background-color: #91F0C3; }
         .titlegreenbottom2{ background-color: #5AD298; }
-        .titlegreenbottom3{ background-color: #81E77F; }
-        .titlegreenbottom4{ background-color: #8BDBB5; }
+        .titlegreenbottom3{ background-color: #8BDBB5; }
+        .titlegreenbottom4{ background-color: #81E77F; }
         .titlegreenbottom5{ background-color: #A0DB9F; }
         .titlegreenbottom6{ background-color: #31BE7B; }
-    }
-    .title * {
-        transition: 300ms;
+
+        *, * *{
+            // transition: color 50ms;
+        }
     }
     .title_bottom{
         background: linear-gradient(160deg, rgb(207, 249, 255) 50%, rgb(255, 228, 179) 60%);
@@ -64,13 +88,24 @@ body{
 
     .title{
         transition: 300ms;
-        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 85%), url('image/angkaew-night.jpg') center center/cover;
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 75%), url('image/angkaew-night.jpg') center center/cover;
         
         .bluebox{ background-color: #002e3d; }
-        .blueboxlight{ background-color: #001114; }
-    }
-    .title * {
-        transition: 300ms;
+        .blueboxlight{ background-color: #003b45; }
+        .titlebluebottom1{ background-color: #1a2a2a; }
+        .titlebluebottom2{ background-color: #021e24; }
+        .titlebluebottom3{ background-color: #06161a; }
+        .titlebluebottom4{ background-color: #012e38; }
+        .titlegreenbottom1{ background-color: #002c2f; }
+        .titlegreenbottom2{ background-color: #002f1b; }
+        .titlegreenbottom3{ background-color: #00582f; }
+        .titlegreenbottom4{ background-color: #012f00; }
+        .titlegreenbottom5{ background-color: #174217; }
+        .titlegreenbottom6{ background-color: #006d38; }
+
+        *, * *{
+            // transition: color 50ms;
+        }
     }
     .title_bottom{
         background: linear-gradient(180deg, rgb(8, 0, 53) 0%, rgb(49, 0, 61) 100%);
