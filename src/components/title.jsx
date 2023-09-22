@@ -14,9 +14,9 @@ function Title(props) {
             </div>
             
             <div className='namebox'>
-                <h1>กลวัชร</h1>
-                <h1>วงษ์ศรีทอง</h1>
-                <p>โปรแกรมเมอร์ & นักพัฒนาซอฟต์แวร์</p>
+                <h1>{props.language=='TH'?props.data.fNameTH:props.data.fNameEN}</h1>
+                <h1>{props.language=='TH'?props.data.lNameTH:props.data.lNameEN}</h1>
+                <p>{props.language=='TH'?props.data.positionTH:props.data.positionEN}</p>
             </div>
 
             <div className='absolute' style={{height: '100px'}}>
