@@ -38,3 +38,145 @@
         position: relative;
     }
 }
+
+.title_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .stalk{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        height: 106vw;
+
+        .absolute{
+            position: relative;
+            top: 48vw;
+            height: 0;
+
+            * {
+                position: relative;
+            }
+
+            .stalk_behide{
+                height: auto;
+                width: 47vw;
+            }
+
+            .stalk_front{
+                height: auto;
+                width: 84vw;
+                bottom: 25.4vw;
+            }
+        }
+    }
+    
+    .fruitset{
+        height: 0;
+        .fruit{
+            border-radius: 1.6vw;
+            z-index: 2;
+            position: relative;
+        }
+    }
+    
+
+    .fence{
+        display: flex;
+        align-items: end;
+
+        div{
+            position: relative;
+            // bottom: 26vw;
+            z-index: 1;
+
+            .fencehead{
+                width: 5.56vw;
+                height: 5.56vw;
+                border-radius: 220px 220px 0 0;
+                background-color: #812f00;
+                border-top: 1px black solid;
+                border-left: 1px black solid;
+                border-right: 1px black solid;
+            }
+            .fencebar{
+                width: 5.56vw;
+                background: linear-gradient(180deg, #812f00 0%, #B06D50 50%); 
+                border-left: 1px black solid;
+                border-right: 1px black solid;
+                border-bottom: 1px black solid;
+            }
+        }
+    }
+    .floor{
+        width: 100vw;
+        height: 16vw;
+        background: linear-gradient(180deg, #026600 0%, #04BD00 100%);
+    }
+    .table{
+        height: 0;
+        margin: 0;
+
+        .table1{
+            width: 46vw;
+            height: 5vw;
+            border-left: 6vw solid transparent;
+            border-right: 4vw solid transparent;
+            border-bottom: 10vw solid #472B00;
+            
+            position: relative;
+            left: 30vw;
+            bottom: 24vw;
+            z-index: 1;
+        }
+        .table2{
+            width: 46vw;
+            height: 2vw;
+            background-color: #3A1D01;
+
+            position: relative;
+            left: 30vw;
+            bottom: 24vw;
+            z-index: 1;
+        }
+        .tableleg-f{
+            position: relative;
+            bottom: 24vw;
+            left: 30vw;
+
+            width: 2vw;
+            height: 10vw;
+            background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
+        }
+        .tableleg-b{
+            position: relative;
+            bottom: 44vw;
+            left: 36vw;
+            
+            width: 2vw;
+            height: 3vw;
+            background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
+        }
+    }
+    .ontable{
+        display: flex;
+        align-items: end;
+        height: 0;
+        z-index: 1;
+
+        position: relative;
+        bottom: 18vw;
+        right: 31vw;
+
+        .card-data{
+            width: 10vw;
+            height: 6vw;
+            margin-right: 4vw;
+        }
+        .soup-bowl{
+            width: 15vw;
+            height: 8vw;
+        }
+    }
+}

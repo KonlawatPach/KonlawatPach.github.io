@@ -4,6 +4,7 @@ import {data} from './../data.js'
 
 import Title from './components/title';
 import './css/global.scss'
+import Title_Bottom from './components/Title-Bottom.jsx';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -28,6 +29,7 @@ function App() {
     <>
       <div className={`${theme}`}>
         <Title switchTheme={switchTheme} switchLanguage={switchLanguage}  theme={theme} language={language} data={data}/>
+        <Title_Bottom />
         <div className='body'>
 
         </div>
