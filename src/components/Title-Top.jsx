@@ -5,7 +5,7 @@ function Title_Top(props) {
     const titleBlueBottomList = [
         [28, 8, 8, 60],
         [70, 8, 6, 0],
-        [20, 12, 7, 0],
+        [20, 12, 8, 0],
         [44, 10, 2, 56]
     ]
     
@@ -46,12 +46,12 @@ function Title_Top(props) {
             <div className="bottomBox">
                 {titleBlueBottomList.map((indexData, index) => (
                     <div key={index} className='absolute' style={{height: '0'}}>
-                        <div className={`titlebluebottom${index} boxbottom`} style={{width: `${indexData[0]}vw`, height: `${indexData[1]}vw`, bottom: `${indexData[2]}vw`, left: `${indexData[3]}vw`}}></div>               
+                        <div className={`titlebluebottom${index+1} boxbottom`} style={{width: `${indexData[0]}vw`, height: `${indexData[1]}vw`, bottom: `${indexData[2]}vw`, left: `${indexData[3]}vw`}}></div>               
                     </div>
                 ))}
                 {titleGreenBottomList.map((indexData, index) => (
                     <div key={index} className='absolute' style={{height: '0'}}>
-                        <div className={`titlegreenbottom${index} boxbottom`} style={{width: `${indexData[0]}vw`, height: `${indexData[1]}vw`, top: `${indexData[2]}vw`, left: `${indexData[3]}vw`}}></div>               
+                        <div className={`titlegreenbottom${index+1} boxbottom`} style={{width: `${indexData[0]}vw`, height: `${indexData[1]}vw`, top: `${indexData[2]}vw`, left: `${indexData[3]}vw`}}></div>               
                     </div>
                 ))}
             </div>

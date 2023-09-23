@@ -22,13 +22,13 @@ body{
     opacity: 0;
     transform: translateX(100%);
     filter: blur(5px);
-    transition: transform 1s;
+    transition: transform 1s !important;
 }
 .hiddenl{
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(5px);
-    transition: transform 1s;
+    transition: transform 1s !important;
 }
 .show{
     opacity: 1;
@@ -45,7 +45,7 @@ body{
     overflow-x: hidden;
 
     .title{
-        transition: 300ms;
+        transition: color 500ms;
         background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 75%), url('image/angkaew-day.jpg') center center/cover;
 
         .bluebox{ background-color: #90E4FF; }
@@ -71,9 +71,9 @@ body{
         .titlegreenbottom14{ background-color: #165300; }
         .titlegreenbottom15{ background-color: #3C8E1F; }
 
-        // *, * *{
-        //     // transition: color 50ms;
-        // }
+        * {
+            transition: background 800ms;
+        }
     }
     .title_bottom{
         background: linear-gradient(170deg, rgb(207, 249, 255) 40%, rgb(255, 228, 179) 60%);
@@ -124,9 +124,9 @@ body{
         .titlegreenbottom14{ background-color: #165300; }
         .titlegreenbottom15{ background-color: #3C8E1F; }
 
-        // *, * *{
-            // transition: color 50ms;
-        // }
+        * {
+            transition: background 800ms;
+        }
     }
     .title_bottom{
         background: linear-gradient(180deg, rgb(8, 0, 53) 0%, rgb(49, 0, 61) 100%);

@@ -16,19 +16,37 @@ function Title_Bottom(props) {
       
         document.addEventListener('scroll', () => {
             let value = window.scrollY;
+            let fruitfall_value = fruitfall.getBoundingClientRect().top + window.scrollY - 450;
             let fruitfallcheck_value = fruitfallcheck.getBoundingClientRect().top + window.scrollY;
             let soup_bowl_value = soup_bowl.getBoundingClientRect().top + window.scrollY - 500;
             
-            console.log(screenWidth);
-            if(value > fruitfallcheck_value && value < soup_bowl_value){
-                fruitfall.style.bottom = 68-((value-fruitfallcheck_value)/10.5) + "vw";
+            // console.log(screenWidth);
+            if(value > fruitfallcheck_value && fruitfall_value <= soup_bowl_value){
+                fruitfall.style.bottom = 68-((value-fruitfallcheck_value)/mapWidthDivided(screenWidth)) + "vw";
                 fruitfall.style.transform = `rotateZ(${value}deg)`;
                 fruitfall.style.opacity = 1;
-            }else if(value > soup_bowl_value){
+            }else if(fruitfall_value > soup_bowl_value){
                 fruitfall.style.opacity = 0;
             }
         });
     }, []);
+
+    let mapValue = (value, fromRangeStart, fromRangeEnd, toRangeStart, toRangeEnd) => {
+        value = Math.min(Math.max(value, fromRangeStart), fromRangeEnd);
+    
+        const fromRangeSize = fromRangeEnd - fromRangeStart;
+        const toRangeSize = toRangeEnd - toRangeStart;
+        const ratio = (value - fromRangeStart) / fromRangeSize;
+        const mappedValue = ratio * toRangeSize + toRangeStart;
+    
+        return mappedValue;
+    }
+
+    let mapWidthDivided = (screenWidth) => {
+        console.log(mapValue(screenWidth, 360, 1200, 0.3, 11));
+        return mapValue(screenWidth, 360, 1200, 0.3, 11);
+        // if(screenWidth>1400) return 13;
+    } 
     const fenceHighList = Array.from({ length: 21 }, (_, index) => 40 + index*3);
     
 
@@ -55,7 +73,7 @@ function Title_Bottom(props) {
                 {fenceHighList.map((indexData, index) => (
                     <div key={index}>
                         <div className='fencehead'></div>
-                        <div id={`${index}`} className='fencebar' style={{ height: `${indexData}vw` }}></div>
+                        <div id={`${index}`} className='fencebar' style={{ height: `${100}vw` }}></div>
                     </div>
                 ))}
             </div>
