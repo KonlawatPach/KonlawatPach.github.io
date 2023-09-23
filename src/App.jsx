@@ -2,15 +2,14 @@ import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import {data} from './../data.js' 
 
-import Title from './components/title';
-import './css/global.scss'
+import Title_Top from './components/Title-Top.jsx';
 import Title_Bottom from './components/Title-Bottom.jsx';
+import './css/global.scss'
 
 function App() {
   const [theme, setTheme] = useState('light');
   const [language, setLanguage] = useState('TH');
   useEffect(() => {
-    // Create and configure the IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       // document.addEventListener('keydown', (event) => {
       //   if (event.key === 'Tab') {
@@ -18,7 +17,7 @@ function App() {
       //   }
       // });
       entries.forEach((entry) => {
-        console.log(entry);
+        // console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
         }
@@ -28,13 +27,11 @@ function App() {
       });
     });
 
-    // Select and observe hidden elements
     const hiddenElementLeft = Array.from(document.querySelectorAll('.hiddenl'));
     const hiddenElementRight = Array.from(document.querySelectorAll('.hiddenr'));
     const hiddenElement = hiddenElementLeft.concat(hiddenElementRight);
     hiddenElement.forEach((el) => observer.observe(el));
 
-    // Clean up the observer when the component unmounts
     return () => {
       hiddenElement.forEach((el) => observer.unobserve(el));
     };
@@ -50,7 +47,7 @@ function App() {
   return (
     <>
       <div className={`${theme}`}>
-        <Title switchTheme={switchTheme} switchLanguage={switchLanguage}  theme={theme} language={language} data={data}/>
+        <Title_Top switchTheme={switchTheme} switchLanguage={switchLanguage} theme={theme} language={language} data={data}/>
         <Title_Bottom />
         <div className='body'>
 
