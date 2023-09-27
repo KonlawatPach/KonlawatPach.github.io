@@ -61,17 +61,28 @@
             position: relative;
             top: 48vw;
             height: 0;
+            z-index: 1;
 
             * {
                 position: relative;
             }
 
             .stalk_behide{
+                -webkit-user-drag: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
                 height: auto;
                 width: 47vw;
             }
 
             .stalk_front{
+                -webkit-user-drag: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
                 height: auto;
                 width: 84vw;
                 bottom: 25.4vw;
@@ -85,9 +96,25 @@
             border-radius: 1.6vw;
             z-index: 1;
             position: relative;
+            cursor: pointer;
         }
     }
     
+    .sky{
+        height: 0;
+        .absolute{
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+
+            img{
+                z-index: 1;
+                position: relative;
+                opacity: 0.9;
+                filter: blur(2px);
+            }
+        }
+    }
 
     .fence{
         display: flex;

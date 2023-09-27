@@ -48,7 +48,7 @@ function App() {
     <>
       <div className={`${theme}`}>
         <Title_Top switchTheme={switchTheme} switchLanguage={switchLanguage} theme={theme} language={language} data={data}/>
-        <Title_Bottom />
+        <Title_Bottom theme={theme} />
         <div className='body'>
 
         </div>
