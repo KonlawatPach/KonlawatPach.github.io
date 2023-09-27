@@ -73,7 +73,7 @@ function Title_Bottom(props) {
                 {fenceHighList.map((indexData, index) => (
                     <div key={index}>
                         <div className='fencehead'></div>
-                        <div id={`${index}`} className='fencebar' style={{ height: `${100}vw` }}></div>
+                        <div id={`${index}`} className='fencebar' style={{ height: `${50}vw` }}></div>
                     </div>
                 ))}
             </div>

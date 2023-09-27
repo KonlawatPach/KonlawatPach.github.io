@@ -34,7 +34,7 @@ body{
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-    transition: transform 1s;
+    transition: transform 1s !important;
 }
 
 

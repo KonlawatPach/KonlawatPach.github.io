@@ -83,7 +83,7 @@
         height: 0;
         .fruit{
             border-radius: 1.6vw;
-            z-index: 2;
+            z-index: 1;
             position: relative;
         }
     }
@@ -118,7 +118,7 @@
     }
     .floor{
         width: 100vw;
-        height: 16vw;
+        height: 22vw;
         background: linear-gradient(180deg, #026600 0%, #04BD00 100%);
     }
     .table{
