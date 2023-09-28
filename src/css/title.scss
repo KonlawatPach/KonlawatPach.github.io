@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: end;
 
+    .bluebox{
+        transition: 500ms;
+    }
+
     .blueboxlight{
         bottom: 50px;
         width: 180px;
@@ -102,6 +106,7 @@
     
     .sky{
         height: 0;
+        
         .absolute{
             display: flex;
             flex-direction: column;
@@ -113,6 +118,20 @@
                 opacity: 0.9;
                 filter: blur(2px);
             }
+        }
+    }
+
+    .mountain{
+        height: 0;
+        position: absolute;
+        z-index: 0;
+        width: 100vw;
+
+        svg{
+            position: relative;
+            top: 86vw;
+            width: 100vw;
+            height: auto;
         }
     }
 
@@ -148,21 +167,80 @@
         height: 22vw;
         background: linear-gradient(180deg, #026600 0%, #04BD00 100%);
     }
+
+    .object-floor{
+        position: absolute;
+        height: 0;
+
+        *{
+            position: relative;
+            height: auto;
+        }
+
+        .bush-behide{   
+            top: 126vw;
+            width: 100vw;
+            z-index: 1;
+        }
+        .stone-left{
+            width: 18vw;
+            top: 108vw;
+            z-index: 1;
+        }
+        .bush-front{
+            width: 18vw;
+            top: 123.6vw;
+            right: 20vw;
+            z-index: 3;
+        }
+        .stone-right{
+            width: 20vw;
+            left: 44vw;
+            top: 124.2vw;
+            z-index: 2;
+        }
+        .parasol{
+            width: 80vw;
+            left: 0vw;
+            top: 55vw;
+            z-index: 2;
+        }
+        .chair{
+            width: 22vw;
+            left: 24vw;
+            top: 33.41vw;
+            z-index: 3;
+        }
+        .light{
+            left: 18vw;
+            width: 60vw;
+            bottom: 20vw;
+            border-left: 20vw solid transparent;
+            border-right: 20vw solid transparent;
+            border-bottom: 53vw solid rgba(255, 255, 206, 0.411);
+            filter: blur(30px);
+            z-index: 1;
+        }
+    }
+
     .table{
         height: 0;
         margin: 0;
+
+        *{
+            z-index: 2;
+        }
 
         .table1{
             width: 46vw;
             height: 5vw;
             border-left: 6vw solid transparent;
             border-right: 4vw solid transparent;
-            border-bottom: 10vw solid #472B00;
+            border-bottom: 6vw solid #472B00;
             
             position: relative;
             left: 30vw;
-            bottom: 24vw;
-            z-index: 1;
+            bottom: 30vw;
         }
         .table2{
             width: 46vw;
@@ -171,25 +249,24 @@
 
             position: relative;
             left: 30vw;
-            bottom: 24vw;
-            z-index: 1;
+            bottom: 30vw;
         }
         .tableleg-f{
             position: relative;
-            bottom: 24vw;
+            bottom: 30vw;
             left: 30vw;
 
             width: 2vw;
-            height: 10vw;
+            height: 14vw;
             background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
         }
         .tableleg-b{
             position: relative;
-            bottom: 44vw;
+            bottom: 60vw;
             left: 36vw;
             
             width: 2vw;
-            height: 3vw;
+            height: 6vw;
             background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
         }
     }
@@ -197,20 +274,32 @@
         display: flex;
         align-items: end;
         height: 0;
-        z-index: 1;
+        z-index: 3;
 
         position: relative;
-        bottom: 18vw;
-        right: 31vw;
+        bottom: 26vw;
+        right: 26vw;
+
+        *{
+            position: relative;
+            height: auto;
+        }
+
+        .plant{
+            width: 7vw;
+            bottom: 2vw;
+            left: 1vw;
+
+        }
 
         .card-data{
-            width: 10vw;
-            height: 6vw;
-            margin-right: 4vw;
+            width: 8vw;
+            cursor: pointer;
+            z-index: 5;
         }
-        .soup-bowl{
-            width: 15vw;
-            height: 8vw;
+        .notebook{
+            top: 1vw;
+            width: 24vw;
         }
     }
 }

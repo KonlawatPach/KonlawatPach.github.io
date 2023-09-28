@@ -5,6 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Mitr', sans-serif;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -129,11 +130,11 @@ body{
         }
     }
     .title_bottom{
-        background: linear-gradient(180deg, rgb(8, 0, 53) 0%, rgb(49, 0, 61) 100%);
+        background: linear-gradient(180deg, rgb(8, 0, 53) 0%, rgb(27, 0, 34) 100%);
         height: max-content;
 
         .fruitset{
-            .fruit1{ background: linear-gradient(180deg, #440072 0%, #260046 100%); }
+            .fruit1{ background: linear-gradient(180deg, #6400a7 0%, #500091 100%); }
             .fruit5{ background: linear-gradient(180deg, #e415ff 0%, #6e23c4 100%); }
             .fruit3{ background: linear-gradient(180deg, #e415ff 0%, #6e23c4 100%); }
             .fruit4{ background: linear-gradient(180deg, #4b00f9 0%, #2f009c 100%); }

@@ -10,12 +10,13 @@ function App() {
   const [theme, setTheme] = useState('light');
   const [language, setLanguage] = useState('TH');
   useEffect(() => {
+    // document.addEventListener('keydown', (event) => {
+    //   if (event.key === 'Tab') {
+    //     console.log('User pressed the Tab key');
+    //   }
+    // });
+
     const observer = new IntersectionObserver((entries) => {
-      // document.addEventListener('keydown', (event) => {
-      //   if (event.key === 'Tab') {
-      //     console.log('User pressed the Tab key');
-      //   }
-      // });
       entries.forEach((entry) => {
         // console.log(entry);
         if (entry.isIntersecting) {
@@ -32,9 +33,9 @@ function App() {
     const hiddenElement = hiddenElementLeft.concat(hiddenElementRight);
     hiddenElement.forEach((el) => observer.observe(el));
 
-    return () => {
-      hiddenElement.forEach((el) => observer.unobserve(el));
-    };
+    // return () => {
+    //   hiddenElement.forEach((el) => observer.unobserve(el));
+    // };
   }, []);
 
   const switchTheme = () => {

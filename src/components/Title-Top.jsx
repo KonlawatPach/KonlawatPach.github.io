@@ -29,7 +29,9 @@ function Title_Top(props) {
 
     return (
         <div className='title'>
-            <div className='bluebox hiddenr' style={{width:'70vw', height: '70px'}}></div>
+            <div className='bluebox' style={{width:'70vw', height: '1px'}}></div>
+            <div className='bluebox hiddenr' style={{width:'70vw', height: '60px'}}></div>
+
             <div className='absolute' style={{height: '40px'}}>  
                 <div className='blueboxlight hiddenr' style={{width:'2  60px', height: '70px'}}>
                     <img onClick={props.switchTheme} src={props.theme=='light'?"title/sun.svg":"title/moon.svg"} alt="sun"/>
