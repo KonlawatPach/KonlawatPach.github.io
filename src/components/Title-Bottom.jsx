@@ -156,7 +156,7 @@ function Title_Bottom(props) {
             </div>
             <div className='ontable'>
                 <img className='plant' src="/title/plant.svg" />
-                <img className='card-data' src="/title/card-data.svg" />
+                <img className='card-data' onClick={props.switchShowCard} src="/title/card-data.svg" />
                 <img className='notebook' src="/title/notebook.svg" />
             </div>
             

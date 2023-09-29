@@ -3,6 +3,9 @@ export const data = {
     fNameTH : "นายกลวัชร",
     lNameTH : "วงษ์ศรีทอง",
     positionTH : "โปรแกรมเมอร์ & นักพัฒนาซอฟต์แวร์",
+    cardTH : {
+        
+    },
     
     // english
     fNameEN : "Konlawat",
