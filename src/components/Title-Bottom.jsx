@@ -11,8 +11,6 @@ function Title_Bottom(props) {
         const fruitfallcheck = document.getElementById('fruitfallcheck');
         const fencePos = document.getElementsByClassName('fence')[0];
 
-        const stalk_behide = document.getElementsByClassName('stalk_behide')[0];
-
         const updateScreenWidth = () => {
             setScreenWidth(window.innerWidth);
         };
@@ -55,6 +53,9 @@ function Title_Bottom(props) {
     }
 
     const fenceHighList = Array.from({ length: 21 }, (_, index) => 40 + index*3);
+    const flyingCard = () => {
+        props.switchShowCard();
+    }
     
 
     return (
@@ -156,7 +157,7 @@ function Title_Bottom(props) {
             </div>
             <div className='ontable'>
                 <img className='plant' src="/title/plant.svg" />
-                <img className='card-data' onClick={props.switchShowCard} src="/title/card-data.svg" />
+                <img className='card-data' onClick={() => flyingCard()} src="/title/card-data.svg" style={{right: `${props.showCard?'60vw':'0vw'}`, bottom: `${props.showCard?'30vh':'0vh'}`, rotate: `${props.showCard?'30deg':'0deg'}`}}/>
                 <img className='notebook' src="/title/notebook.svg" />
             </div>
             

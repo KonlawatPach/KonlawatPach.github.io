@@ -1,17 +1,20 @@
 .card-component{
     .modal-background{
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0);
         width: 100vw;
         height: 100vh;
         z-index: 5;
+        transition: all 0.5s;
 
         .modal-box{
+            transition: all 1s;
             background-color: #fffcf3;
             border: 1px black solid;
             position: fixed;
-            left: 50%;
-            top: 50%;
+            left: -50%;
+            top: -50%;
+            rotate: 20deg;
             transform: translate(-50%, -50%);
 
             font-size: 1.25rem;

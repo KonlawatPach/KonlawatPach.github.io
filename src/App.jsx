@@ -54,9 +54,9 @@ function App() {
   return (
     <>
       <div className={`${theme}`}>
-        <Card showCard={showCard}></Card>
+        {showCard?<Card showCard={showCard} switchShowCard={switchShowCard}></Card>:''}
         <Title_Top switchTheme={switchTheme} switchLanguage={switchLanguage} theme={theme} language={language} data={data}/>
-        <Title_Bottom theme={theme} switchShowCard={switchShowCard}/>
+        <Title_Bottom theme={theme} switchShowCard={switchShowCard} showCard={showCard}/>
         <div className='body'>
 
         </div>
