@@ -72,21 +72,11 @@
             }
 
             .stalk_behide{
-                -webkit-user-drag: none;
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
                 height: auto;
                 width: 47vw;
             }
 
             .stalk_front{
-                -webkit-user-drag: none;
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
                 height: auto;
                 width: 84vw;
                 bottom: 25.4vw;
@@ -189,7 +179,7 @@
         }
         .bush-front{
             width: 18vw;
-            top: 123.6vw;
+            top: 122.4vw;
             right: 20vw;
             z-index: 3;
         }
@@ -206,9 +196,9 @@
             z-index: 2;
         }
         .chair{
-            width: 22vw;
-            left: 24vw;
-            top: 33.41vw;
+            width: 18vw;
+            right: 56vw;
+            top: 76vw;
             z-index: 3;
         }
         .light{
@@ -236,7 +226,7 @@
             height: 5vw;
             border-left: 6vw solid transparent;
             border-right: 4vw solid transparent;
-            border-bottom: 6vw solid #472B00;
+            border-bottom: 6vw solid #753800;
             
             position: relative;
             left: 30vw;
@@ -245,7 +235,7 @@
         .table2{
             width: 46vw;
             height: 2vw;
-            background-color: #3A1D01;
+            background-color: #502700;
 
             position: relative;
             left: 30vw;
@@ -258,16 +248,16 @@
 
             width: 2vw;
             height: 14vw;
-            background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
+            background: linear-gradient(180deg, #502700 0%, #281700 100%);
         }
         .tableleg-b{
             position: relative;
-            bottom: 60vw;
+            bottom: 58vw;
             left: 36vw;
             
             width: 2vw;
             height: 6vw;
-            background: linear-gradient(180deg, #3A1D01 0%, #281700 100%);
+            background: linear-gradient(180deg, #502700 0%, #281700 100%);
         }
     }
     .ontable{

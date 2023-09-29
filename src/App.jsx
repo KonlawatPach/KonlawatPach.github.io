@@ -30,7 +30,6 @@ function App() {
         // }
       });
     });
-
     const hiddenElementLeft = Array.from(document.querySelectorAll('.hiddenl'));
     const hiddenElementRight = Array.from(document.querySelectorAll('.hiddenr'));
     const hiddenElement = hiddenElementLeft.concat(hiddenElementRight);
@@ -39,16 +38,24 @@ function App() {
     // return () => {
     //   hiddenElement.forEach((el) => observer.unobserve(el));
     // };
+    document.body.style.overflowX = 'hidden';
   }, []);
 
   const switchTheme = () => {
-    setTheme(theme=='light'?'dark':'light');
+    setTheme(theme=='light' ? 'dark' : 'light');
   }
   const switchLanguage = () => {
-    setLanguage(language=='TH'?'EN':'TH');
+    setLanguage(language=='TH' ? 'EN' : 'TH');
   }
   const switchShowCard = () => {
-    setShowCard(showCard?false:true);
+    if(showCard){
+      setShowCard(false);
+      document.body.style.overflowY = 'unset';
+    }
+    else{
+      setShowCard(true);
+      document.body.style.overflowY = 'hidden';
+    }
   }
 
   return (

@@ -9,7 +9,7 @@ function Card(props){
             document.getElementById('card-modal').style.top = '50%'
             document.getElementById('card-modal').style.rotate = '0deg'
             document.getElementsByClassName('modal-background')[0].style.background = 'rgba(0, 0, 0, 0.5)'
-        }, 1);
+        }, 800);
     },[])
 
     const closing = () => {
