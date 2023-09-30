@@ -91,6 +91,11 @@ html, body{
             .fruit2{ background: linear-gradient(180deg, #F92D00 0%, #9C0000 100%); }
         }
     }
+    .card-component{
+        .modal-box{
+            background-color: #fffcf3;
+        }
+    }
     .body{
         transition: 300ms;
         height: max-content;
@@ -144,6 +149,11 @@ html, body{
             .fruit2{ background: linear-gradient(180deg, #4b00f9 0%, #2f009c 100%); }
         }
     }
+    .card-component{
+        .modal-box{
+            background-color: #1b0045;
+        }
+    }   
     .body{
         transition: 300ms;
         height: max-content;

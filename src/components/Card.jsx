@@ -22,11 +22,18 @@ function Card(props){
         }, 500);
     }
 
+    const nextPage = () => {
+
+    }
+
     return (
         <div className='card-component' style={{display: `${props.showCard?'block':'none'}`}}>
             <div className="modal-background">
-                <div id="card-modal" className="modal-box container text-center">
-                    <h3>ข้อมูลส่วนตัว</h3>
+                <div id="card-modal" className="modal-box container text-left">
+                    <div className='col-12'>
+                        <h1>{props.language=='TH' ? props.data.fNameTH : props.data.fNameEN} {props.language=='TH' ? props.data.lNameTH : props.data.lNameEN}</h1>
+                        <p>{props.language=='TH' ? props.data.positionTH :  props.data.positionEN}</p>
+                    </div>
                     <div className="row">
                         <div className="col-md-6">
                             aaa
@@ -35,7 +42,9 @@ function Card(props){
                             aaa
                         </div>
                     </div>
-                    <button onClick={closing}>ปิด</button>
+                    <br />
+                    <button onClick={closing}>กลับ</button>
+                    <button onClick={closing}>ต่อไป</button>
                 </div>
             </div>
         </div>

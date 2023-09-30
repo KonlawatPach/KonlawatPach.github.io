@@ -61,9 +61,28 @@ function App() {
   return (
     <>
       <div className={`${theme}`}>
-        {showCard?<Card showCard={showCard} switchShowCard={switchShowCard}></Card>:''}
-        <Title_Top switchTheme={switchTheme} switchLanguage={switchLanguage} theme={theme} language={language} data={data}/>
-        <Title_Bottom theme={theme} switchShowCard={switchShowCard} showCard={showCard}/>
+        { showCard &&
+          <Card 
+            showCard={showCard}
+            switchShowCard={switchShowCard}
+            theme={theme}
+            language={language}
+            data={data}
+          />
+        }
+        <Title_Top
+          switchTheme={switchTheme}
+          switchLanguage={switchLanguage}
+          theme={theme}
+          language={language}
+          data={data}
+        />
+        <Title_Bottom 
+          theme={theme}
+          switchShowCard={switchShowCard}
+          showCard={showCard}
+        />
+
         <div className='body'>
 
         </div>

@@ -78,48 +78,26 @@ function Title_Bottom(props) {
             </div>
 
             {
-                props.theme == 'dark' ?
-                    <div style={{position: 'absolute'}}>
-                        <img src="/title/star.svg" style={{width: '100vw', left: '0vw', top: '24vw', zIndex:'0', position: 'relative'}} />
-                    </div> 
-                :
-                    ''                    
+                props.theme == 'dark' &&
+                <div style={{position: 'absolute'}}>
+                    <img src="/title/star.svg" style={{width: '100vw', left: '0vw', top: '24vw', zIndex:'0', position: 'relative'}} />
+                </div>                   
             }
 
             <div className='sky'>
-                {
-                    props.theme == 'light' ?
-                    <div className="absolute">
-                        <img className='hiddenl' src="/title/cloud1-d.svg" style={{width: '34vw', right: '52vw', bottom: '70vw', zIndex:'0'}} />
-                        <img className='hiddenr' src="/title/cloud2-d.svg" style={{width: '41vw', right: '0vw', bottom: '30vw', zIndex:'1'}} />
-                        <img className='hiddenl' src="/title/cloud3-d.svg" style={{width: '36vw', right: '59vw', bottom: '60vw', zIndex:'0'}} />
-                    </div>
-                    :
-                    <div className="absolute">
-                        <img className='hiddenl' src="/title/cloud1-n.svg" style={{width: '34vw', right: '52vw', bottom: '70vw', zIndex:'0'}} />
-                        <img className='hiddenr' src="/title/cloud2-n.svg" style={{width: '41vw', right: '0vw', bottom: '30vw', zIndex:'1'}} />
-                        <img className='hiddenl' src="/title/cloud3-n.svg" style={{width: '36vw', right: '59vw', bottom: '60vw', zIndex:'0'}} />
-                    </div>
-                }
+                <div className="absolute">
+                    <img className='hiddenl' src={`/title/cloud1-${props.theme == 'light' ? 'd' : 'n' }.svg`} style={{width: '34vw', right: '52vw', bottom: '70vw', zIndex:'0'}} />
+                    <img className='hiddenr' src={`/title/cloud2-${props.theme == 'light' ? 'd' : 'n' }.svg`} style={{width: '41vw', right: '0vw', bottom: '30vw', zIndex:'1'}} />
+                    <img className='hiddenl' src={`/title/cloud3-${props.theme == 'light' ? 'd' : 'n' }.svg`} style={{width: '36vw', right: '59vw', bottom: '60vw', zIndex:'0'}} />
+                </div>
             </div>
 
             <div className='mountain'>
-                {
-                    props.theme == 'light' ?
-                    <svg width="1440" height="391" viewBox="0 0 1440 391" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" fill="#091D00"/>
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeWidth="0.5"/>
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeOpacity="0.2" strokeWidth="0.5"/>
-                    </svg>
-
-                    :
-                    <svg width="1440" height="391" viewBox="0 0 1440 391" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" fill="#000000"/>
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeWidth="0.5"/>
-                        <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeOpacity="0.2" strokeWidth="0.5"/>
-                    </svg>
-
-                }
+                <svg width="1440" height="391" viewBox="0 0 1440 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" fill={`${props.theme == 'light' ? '#091D00' : '#000000'}`}/>
+                    <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeWidth="0.5"/>
+                    <path d="M455.5 1.15643C405.1 6.75643 100.333 122.056 -44 281.723V390.723H1470L1462.5 1.15649L987.5 317.223C830 141.056 505.9 -4.44357 455.5 1.15643Z" stroke="black" strokeOpacity="0.2" strokeWidth="0.5"/>
+                </svg>
             </div>
             
             <div className="fence">
@@ -140,11 +118,7 @@ function Title_Bottom(props) {
                 <img src="title/stone-right.svg" className='stone-right'/>
                 <img src="title/parasol.svg" className='parasol'/>
                 <img src="title/chair.svg" className='chair'/>
-                { props.theme=='dark' ?
-                    <div className='light'></div>
-                :
-                    ''
-                }
+                { props.theme=='dark' && <div className='light' /> }
             </div>
 
             <div className='table'>
