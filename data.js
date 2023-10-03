@@ -38,7 +38,7 @@ export const data = {
                 company : 'Never Sleep Company Limited',
                 worktime : 'มิ.ย. 2566 - ก.ย. 2566 | 3 เดือน',
                 image : 'neversleep.svg',
-                workimage : '',
+                workimage : 'neversleep.png',
                 workdescription : 'คอยแก้ไขปรับแต่ง API และชุดคำสั่งของ bot API ด้วย puppeteer library เพื่อเป็นตัวกลางเชื่อมต่อระหว่าง php backend และ API ดำเนินการธุรกรรมของธนาคาร ก่อนที่บริษัทจะปิดตัวลง'
             },
             {
@@ -82,12 +82,12 @@ export const data = {
 
         education : [
             {
-                Qualification : 'Master Degree in Computer Science Special section Saturday/Sunday (Studying)',
+                qualification : 'Master Degree in Computer Science Special section Saturday/Sunday (Studying)',
                 place : 'Chiang Mai University Chiang Mai Province (2023 - present)',
                 description : []
             },
             {
-                Qualification : 'Bachelor Degree in Computer Science Minor in Business Administration (GPA 3.43)',
+                qualification : 'Bachelor Degree in Computer Science Minor in Business Administration (GPA 3.43)',
                 place : 'Chiang Mai University Chiang Mai Province (2019 - 2023)',
                 description : [
                     '2nd Class Honors, Faculty of Science',
@@ -95,9 +95,44 @@ export const data = {
                 ]
             },
             {
-                qualification : 'High school Mathematics-Science stream (GPA 3.42)',
+                qualification : 'High school Mathematics-Science study plan (GPA 3.42)',
                 place : 'Anurajprasit School Nonthaburi Province (2016 - 2019)',
                 description : []
+            }
+        ],
+
+        work_experience : [
+            {
+                position : 'Backend NodeJS & PHP Laravel Developer',
+                company : 'Never Sleep Company Limited',
+                worktime : 'Jun 2023 - Sep 2023 | 3 months',
+                image : 'neversleep.svg',
+                workimage : 'neversleep.png',
+                workdescription : 'I maintained and customized the API and bot API commands with the puppeteer library to connection between the php backend and the API to process bank transactions. before the company is closed.'
+            },
+            {
+                position : 'Angular Frontend & Firebase Backend Developer (Freelance)',
+                company : 'Motorcycle loan database management website',
+                worktime : 'Jun 2023 - May 2023 | 2 months',
+                image : '',
+                workimage : 'freelance1.png',
+                workdescription : 'I accepted Freelance with my friends to created web applications using Angular Framework and using Firebase as Backend, Hosting and Storage **During work, there were communication problems causing the project to be canceled midway. but, I can show my work**.'
+            },
+            {
+                position : 'Angular Frontend Developer (Part-time)',
+                company : 'Botnoi Voice Group',
+                worktime : 'Jul 2022 - Sep 2022 | 4 months',
+                image : 'botnoi.svg',
+                workimage : 'botnoi2.png',
+                workdescription : 'I accepted a part-time job after completing the internship. I edited the website following the UI department design, just like during the internship. but, most of it is scattered across different parts of the web page.'
+            },
+            {
+                position : 'Internship Angular Frontend Developer (100% online)',
+                company : 'Botnoi Voice Group',
+                worktime : 'May 2022 - June 2022 | 2 months',
+                image : 'botnoi.svg',
+                workimage : 'botnoi1.png',
+                workdescription : 'I was online internship 2 months. I editing the website following the UI department design, including fixing various bugs found on the website with my friends and large project is creating a sound library page components.'
             }
         ]
     },

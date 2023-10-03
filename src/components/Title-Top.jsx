@@ -42,7 +42,7 @@ function Title_Top(props) {
             <div className='namebox'>
                 <h1 className='hiddenr'>{props.language=='TH'?props.data.fNameTH:props.data.fNameEN}</h1>
                 <h1 className='hiddenr'>{props.language=='TH'?props.data.lNameTH:props.data.lNameEN}</h1>
-                <p className='hiddenr'>{props.language=='TH'?props.data.positionTH:props.data.positionEN}</p>
+                <h5 className='hiddenr'>{props.language=='TH'?props.data.positionTH:props.data.positionEN}</h5>
             </div>
 
             <div className="bottomBox">

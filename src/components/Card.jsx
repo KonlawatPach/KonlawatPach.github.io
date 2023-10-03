@@ -19,15 +19,16 @@ function Card(props){
     },[])
 
     const nextcard = (cardIndex) => {
-        // if(cardIndex == 3){
-        //     setTimeout(() => {
-        //         props.switchShowCard();
-        //     }, 500);
-        // }
-
-        document.getElementsByClassName('card-modal')[cardIndex].style.left = '50%'
-        document.getElementsByClassName('card-modal')[cardIndex].style.top = '50%'
-        document.getElementsByClassName('card-modal')[cardIndex].style.rotate = '0deg'
+        if(cardIndex == 3){
+            setTimeout(() => {
+                window.open('https://github.com/KonlawatPach', '_blank');
+                // props.switchShowCard();
+            }, 500);
+        }else{
+            document.getElementsByClassName('card-modal')[cardIndex].style.left = '50%'
+            document.getElementsByClassName('card-modal')[cardIndex].style.top = '50%'
+            document.getElementsByClassName('card-modal')[cardIndex].style.rotate = '0deg'
+        }
     }
 
     const closing = (cardIndex) => {
@@ -136,14 +137,14 @@ function Card(props){
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(0)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'วางกระดาษ ' : 'Place the paper'}
+                                {props.language=='TH' ? 'วางกระดาษ' : 'Place the paper'}
                             </span>
                         </span>
                         <span className='smalltext mb-4'>1/3</span>
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(1)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'ต่อไป ' : 'Next'}
+                                {props.language=='TH' ? 'ต่อไป' : 'Next'}
                             </span>
                         </span>
                     </div>
@@ -164,7 +165,7 @@ function Card(props){
                                         {data.description.length>0 && <hr />}
                                         <ul>
                                             {data.description.map((description, index) => (
-                                                <li className='smalltext' key={description}>{description}</li>
+                                                <li className='smalltext' key={index}>{description}</li>
                                             ))}
                                         </ul>
                                     </li>
@@ -181,14 +182,14 @@ function Card(props){
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(1)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'ย้อนกลับ ' : 'Back'}
+                                {props.language=='TH' ? 'ย้อนกลับ' : 'Back'}
                             </span>
                         </span>
                         <span className='smalltext mb-4'>2/3</span>
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(2)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'ต่อไป ' : 'Next'}
+                                {props.language=='TH' ? 'ต่อไป' : 'Next'}
                             </span>
                         </span>
                     </div>
@@ -241,14 +242,14 @@ function Card(props){
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(2)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'ย้อนกลับ ' : 'Back'}
+                                {props.language=='TH' ? 'ย้อนกลับ' : 'Back'}
                             </span>
                         </span>
                         <span className='smalltext mb-4'>3/3</span>
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(3)}/>
                             <span className='smalltext'>
-                                {props.language=='TH' ? 'ดูผลงาน ' : 'My Portfolio'}
+                                {props.language=='TH' ? 'ดูผลงานบนกิตฮับ' : 'Work on by Github'}
                             </span>
                         </span>
                     </div>
