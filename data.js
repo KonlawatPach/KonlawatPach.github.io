@@ -19,7 +19,7 @@ export const data = {
             },
             {
                 qualification : 'ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์ ไมเนอร์บริหารธุรกิจรวม (GPA 3.43)',
-                place : 'มหาวิทยาลัยเชียงใหม่ จังหวัดเชียงใหม่ (2562 – 2566)',
+                place : 'มหาวิทยาลัยเชียงใหม่ จังหวัดเชียงใหม่ (2562 - 2566)',
                 description : [
                     'เกียรตินิยมลำดับ 2 คณะวิทยาศาสตร์',
                     'รางวัลโปสเตอร์โพรเจคจบ ลำดับ 1 สาขาวิทยาการคอมพิวเตอร์'
@@ -29,6 +29,41 @@ export const data = {
                 qualification : 'มัธยมศึกษาตอนปลาย สายคณิตศาสตร์-วิทยาศาสตร์ (GPA 3.42)',
                 place : 'โรงเรียนอนุราชประสิทธิ์ จังหวัดนนทบุรี (2559 - 2562)',
                 description : []
+            }
+        ],
+
+        work_experience : [
+            {
+                position : 'Backend NodeJS & PHP Laravel Developer',
+                company : 'Never Sleep Company Limited',
+                worktime : 'มิ.ย. 2566 - ก.ย. 2566 | 3 เดือน',
+                image : 'neversleep.svg',
+                workimage : '',
+                workdescription : 'คอยแก้ไขปรับแต่ง API และชุดคำสั่งของ bot API ด้วย puppeteer library เพื่อเป็นตัวกลางเชื่อมต่อระหว่าง php backend และ API ดำเนินการธุรกรรมของธนาคาร ก่อนที่บริษัทจะปิดตัวลง'
+            },
+            {
+                position : 'Angular Frontend & Firebase Backend Developer (ฟรีแลนซ์)',
+                company : 'เว็บไซต์จัดการฐานข้อมูลยืมคืนมอเตอร์ไซต์',
+                worktime : 'มิ.ย. 2566 - พ.ค. 2566 | 2 เดือน',
+                image : '',
+                workimage : 'freelance1.png',
+                workdescription : 'รับ Freelance กับเพื่อนๆ รับผิดชอบการสร้างเว็บแอปพลิเคชัน โดยใช้ Frontend เป็น Angular Framework และใช้ Firebase เป็น Backend, Hosting และ Storage **ระหว่างงานเกิดปัญหาในการสื่อสารทำให้ถูกยกเลิกโพรเจคไปกลางคัน และไม่ได้รับเงินตามที่ตกลง แต่ยังคงมีผลงานอยู่**'
+            },
+            {
+                position : 'Angular Frontend Developer (พาร์ทไทม์)',
+                company : 'Botnoi Voice Group',
+                worktime : 'ก.ค. 2565 - ก.ย. 2565 | 4 เดือน',
+                image : 'botnoi.svg',
+                workimage : 'botnoi2.png',
+                workdescription : 'รับงานพาร์ทไทม์หลังจบการฝึกงาน แก้ไขเว็บไซต์ตามที่ฝ่าย UI ได้ออกแบบไว้เหมือนตอนฝึกงาน แต่ส่วนใหญ่จะกระจัดกระจายไปตามส่วนต่างๆของหน้าเว็บ'
+            },
+            {
+                position : 'Internship Angular Frontend Developer (ออนไลน์ 100%)',
+                company : 'Botnoi Voice Group',
+                worktime : 'พ.ค. 2565 - มิ.ย 2565 | 2 เดือน',
+                image : 'botnoi.svg',
+                workimage : 'botnoi1.png',
+                workdescription : 'ฝึกงานแบบออนไลน์เป็นเวลา 2 เดือน แก้ไขเว็บไซต์ตามที่ฝ่าย UI ได้ออกแบบไว้ รวมไปถึงปรับแก้บัคต่างๆที่พบเจอในเว็บไซต์กับเพื่อนๆอีก 2 คน โดยมีโพรเจคขนาดใหญ่คือการสร้าง component ที่เป็นหน้าคลังเสียง'
             }
         ]
     },
@@ -47,20 +82,22 @@ export const data = {
 
         education : [
             {
-                qualification : 'ปริญญาโท สาขาวิทยาการคอมพิวเตอร์ (กำลังศึกษา)',
-                place : 'มหาวิทยาลัยเชียงใหม่ จังหวัดเชียงใหม่ (2566 - ปัจจุบัน)'
+                Qualification : 'Master Degree in Computer Science Special section Saturday/Sunday (Studying)',
+                place : 'Chiang Mai University Chiang Mai Province (2023 - present)',
+                description : []
             },
             {
-                qualification : 'ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์ ไมเนอร์บริหารธุรกิจรวม (GPA 3.43)',
-                place : 'มหาวิทยาลัยเชียงใหม่ จังหวัดเชียงใหม่ (2562 – 2566)',
+                Qualification : 'Bachelor Degree in Computer Science Minor in Business Administration (GPA 3.43)',
+                place : 'Chiang Mai University Chiang Mai Province (2019 - 2023)',
                 description : [
-                    'เกียรตินิยมลำดับ 2 คณะวิทยาศาสตร์',
-                    'รางวัลโปสเตอร์โพรเจคจบ ลำดับ 1 สาขาวิทยาการคอมพิวเตอร์'
+                    '2nd Class Honors, Faculty of Science',
+                    '1st place final project poster award in Computer Science'
                 ]
             },
             {
-                qualification : 'มัธยมศึกษาตอนปลาย สายคณิตศาสตร์-วิทยาศาสตร์ (GPA 3.42)',
-                place : 'โรงเรียนอนุราชประสิทธิ์ จังหวัดนนทบุรี (2559 - 2562)',
+                qualification : 'High school Mathematics-Science stream (GPA 3.42)',
+                place : 'Anurajprasit School Nonthaburi Province (2016 - 2019)',
+                description : []
             }
         ]
     },

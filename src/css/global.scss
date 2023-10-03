@@ -46,6 +46,9 @@ html, body{
 p, hr{
     margin: 10px 0px;
 }
+p{  
+    font-weight: 300;
+}
 
 //change per theme
 .light {
@@ -124,12 +127,17 @@ p, hr{
                     border: solid 0.1em #004688;
                 }
             }
-            .education-data{
-                .edublock{
-                    background-color: rgb(242, 232, 255);
+            .education-data, .work-data{
+                .edublock, .workblock{
+                    background-color: rgb(255, 232, 211);
                 }
-                .edublock:hover{
-                    background-color: rgb(222, 196, 255);
+                .edublock:hover, .workblock:hover{
+                    background-color: rgb(255, 193, 177);
+                }
+            }
+            .workexp-zone{
+                .workblock-description{
+                    background-color: white;
                 }
             }
         }
@@ -220,12 +228,17 @@ p, hr{
                 color: rgb(255, 255, 255);
             }
         }
-        .education-data{
-            .edublock{
+        .education-data, .work-data{
+            .edublock, .workblock{
                 background-color: rgb(18, 0, 44);
             }
-            .edublock:hover{
+            .edublock:hover, .workblock:hover{
                 background-color: rgb(44, 0, 44);
+            }
+        }
+        .workexp-zone{
+            .workblock-description{
+                background-color: rgb(59, 59, 59);
             }
         }
     }   

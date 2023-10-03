@@ -3,6 +3,12 @@ import { useState, useEffect } from 'react'
 import '../css/card.scss'
 
 function Card(props){
+    const [selectWorkData, setSelectWorkData] = useState({
+        position : '',
+        workimage : '',
+        workdescription : 'คลิกเลือก เพื่อตรวจสอบรายละเอียด'
+    });
+
     useEffect(() => {
         setTimeout(() => {
             document.getElementsByClassName('card-modal')[0].style.left = '50%'
@@ -38,13 +44,14 @@ function Card(props){
     }
 
     const nextPage = () => {
-
+        
     }
 
     const getCard = () => {
         if(props.language == 'TH') return props.data.cardTH;
         else return props.data.cardEN;
     }
+    const selectwork = (workData) => { setSelectWorkData(workData) }
 
     return (
         <div className='card-component' style={{display: `${props.showCard?'block':'none'}`}}>
@@ -191,29 +198,45 @@ function Card(props){
                 {/* 3 */}
                 <div className="card-modal container text-left">
                     <h1>{props.language=='TH' ? 'ประวัติการทำงาน' : 'Work Experience'}</h1>
+                    
                     <hr />
-                    <div className='row workexp-zone'>
-                        <div className='col-lg-8'>
-                            <ul className='education-data'>
-                                {getCard().education.map((data, index) => (
-                                    <li className='edublock' key={index}>
-                                        <h5>{data.qualification}</h5>
-                                        <p>{data.place}</p>
-                                        {data.description.length>0 && <hr />}
-                                        <ul>
-                                            {data.description.map((description, index) => (
-                                                <li className='smalltext' key={description}>{description}</li>
-                                            ))}
-                                        </ul>
-                                    </li>
-                                ))}
-                            </ul>
+                    <div className='row g-3 workexp-zone'>
+                        <div className='col-lg-8 work-data'>
+                            {getCard().work_experience.map((data, index) => (
+                                <div key={index} className='workblock' style={selectWorkData.position==data.position ? {
+                                    backgroundColor: `${props.theme=='light'?'rgb(255, 193, 177)':'rgb(44, 0, 44)'}`
+                                } : {}} onClick={() => selectwork(data)}>
+                                    <div>
+                                        <h5>{data.position}</h5>
+                                        <hr />
+                                        <p>{data.company} ({data.worktime})</p>
+                                    </div>
+                                    {data.image != '' &&
+                                        (<div className='col-2 companyimage'>
+                                            <img src={`/card/company-logo/${data.image}`} alt={data.image} />
+                                        </div>)
+                                    }
+                                </div>
+                            ))}
                         </div>
+
                         <div className='col-lg-4'>
-                             <img src="image/chiangmai_university.jpg" alt="chiangmai_university" />
+                            <div className='workblock-description'>
+                                <h5>{props.language=='TH' ? 'รายละเอียดของประสบการณ์' : 'Experience Description'}</h5>
+                                <hr />
+                                {
+                                    selectWorkData.workimage != '' ?
+                                        <img src={'/card/company-logo/company-image/' + selectWorkData.workimage} alt={selectWorkData.workimage} />
+                                    :
+                                        <div className='blackimage'></div>
+                                }
+                                <hr />
+                                <p className='textdescription smalltext'>{selectWorkData.workdescription}</p>
+                            </div>
                         </div>
                     </div>
                     
+                    <hr />
                     <div className="button-bar text-center">
                         <span className='arrow'>
                             <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(2)}/>
