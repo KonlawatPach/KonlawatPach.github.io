@@ -35,10 +35,8 @@ function App() {
     const hiddenElement = hiddenElementLeft.concat(hiddenElementRight);
     hiddenElement.forEach((el) => observer.observe(el));
 
-    // return () => {
-    //   hiddenElement.forEach((el) => observer.unobserve(el));
-    // };
     document.body.style.overflowX = 'hidden';
+    document.documentElement.scrollLeft = 0;
   }, []);
 
   const switchTheme = () => {
@@ -60,7 +58,7 @@ function App() {
 
   return (
     <>
-      <div className={`${theme}`}>
+      <div id='body' className={`${theme}`}>
         { showCard &&
           <Card 
             showCard={showCard}

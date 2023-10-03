@@ -43,6 +43,10 @@ html, body{
 }
 
 
+p, hr{
+    margin: 10px 0px;
+}
+
 //change per theme
 .light {
     color: rgb(0, 0, 0);
@@ -92,7 +96,10 @@ html, body{
         }
     }
     .card-component{
-        .modal-box{
+        hr{
+            border: 1px solid rgb(64, 64, 64);
+        }
+        .card-modal{
             background-color: #fffcf3;
         }
     }
@@ -150,7 +157,10 @@ html, body{
         }
     }
     .card-component{
-        .modal-box{
+        hr{
+            border: 1px solid rgb(110, 112, 133);
+        }
+        .card-modal{
             background-color: #1b0045;
         }
     }   
