@@ -63,7 +63,7 @@ function Card(props){
                     <div className='row'>
                         <div className='col-lg-8'>
                             <h1>{props.language=='TH' ? props.data.fNameTH : props.data.fNameEN} {props.language=='TH' ? props.data.lNameTH : props.data.lNameEN}</h1>
-                            <p>{props.language=='TH' ? props.data.positionTH :  props.data.positionEN}</p>
+                            <h5>{props.language=='TH' ? props.data.positionTH :  props.data.positionEN}</h5>
                             <p className='smalltext'>{props.language=='TH' ? props.data.cardTH.description :  props.data.cardEN.description}</p>
                         </div>
                         <div className='col-lg-4 contact'>

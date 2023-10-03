@@ -57,7 +57,7 @@ p{
 
     .title{
         transition: color 500ms;
-        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 75%), url('image/angkaew-day.jpg') center center/cover;
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(255, 255, 255) 75%), url('../../public/image/angkaew-day.jpg') center center/cover;
 
         .bluebox{ background-color: #90E4FF; }
         .blueboxlight{ background-color: #BEEEF9; }
@@ -154,7 +154,7 @@ p{
 
     .title{
         transition: 300ms;
-        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 75%), url('image/angkaew-night.jpg') center center/cover;
+        background: linear-gradient(125deg, rgba(220, 255, 253, 0.1) 50%, rgb(0, 0, 0) 75%), url('../../public/image/angkaew-night.jpg') center center/cover;
         
         .bluebox{ background-color: #002e3d; }
         .blueboxlight{ background-color: #003b45; }
