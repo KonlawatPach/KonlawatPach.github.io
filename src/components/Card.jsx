@@ -41,6 +41,11 @@ function Card(props){
 
     }
 
+    const getCard = () => {
+        if(props.language == 'TH') return props.data.cardTH;
+        else return props.data.cardEN;
+    }
+
     return (
         <div className='card-component' style={{display: `${props.showCard?'block':'none'}`}}>
             <div className="modal-background">
@@ -75,7 +80,7 @@ function Card(props){
                     
                     <hr />
                     <div className="row postit-box">
-                        <div className="col-lg-4 p-2">
+                        <div className="col-lg-4 p-1">
                             <div className='postit postit-g'>
                                 <div className='pin'></div>
                                 <h6 className='mt-1 mb-4'>Programming Language</h6>
@@ -88,7 +93,7 @@ function Card(props){
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 p-2">
+                        <div className="col-lg-4 p-1">
                             <div className='postit postit-p'>
                                 <div className='pin'></div>
                                 <h6 className='mt-1 mb-4'>Software Framework</h6>
@@ -101,7 +106,7 @@ function Card(props){
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 p-2">
+                        <div className="col-lg-4 p-1">
                             <div className='postit postit-b'>
                                 <div className='pin'></div>
                                 <h6 className='mt-1 mb-4'>Database & Other</h6>
@@ -115,76 +120,113 @@ function Card(props){
                             </div>
                         </div>
                     </div>
+                    <span className='verysmalltext text-center d-block mt-2'>
+                        {props.language=='TH' ? '** เรียงลำดับจากใช้งานได้ดีจากมากไปน้อย **' : '** Arrange abilities from highest to lowest **'}
+                    </span>
                     
                     <hr />
                     <div className="button-bar text-center">
                         <span className='arrow'>
-                            <img src="card/arrow.svg" style={{rotate: "180deg"}} alt="<-" onClick={() => closing(0)}/>
-                            <span className='smalltext'>วางกระดาษ</span>
+                            <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(0)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'วางกระดาษ ' : 'Place the paper'}
+                            </span>
                         </span>
                         <span className='smalltext mb-4'>1/3</span>
                         <span className='arrow'>
-                            <img src="card/arrow.svg" alt="->" onClick={() => nextcard(1)}/>
-                            <span className='smalltext'>ต่อไป</span>
+                            <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(1)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'ต่อไป ' : 'Next'}
+                            </span>
                         </span>
                     </div>
                 </div>
+
 
                 {/* 2 */}
                 <div className="card-modal container text-left">
-                    <div className='col-12'>
-                        <h1>{props.language=='TH' ? props.data.fNameTH : props.data.fNameEN} {props.language=='TH' ? props.data.lNameTH : props.data.lNameEN}</h1>
-                        <p>{props.language=='TH' ? props.data.positionTH :  props.data.positionEN}</p>
-                    </div>
+                    <h1>{props.language=='TH' ? 'ประวัติการศึกษา' : 'Education Background'}</h1>
                     <hr />
-                    <div className="row">
-                        <div className="col-md-6">
-                            aaa
+                    <div className='row education-zone'>
+                        <div className='col-lg-8'>
+                            <ul className='education-data'>
+                                {getCard().education.map((data, index) => (
+                                    <li className='edublock' key={index}>
+                                        <h5>{data.qualification}</h5>
+                                        <p>{data.place}</p>
+                                        {data.description.length>0 && <hr />}
+                                        <ul>
+                                            {data.description.map((description, index) => (
+                                                <li className='smalltext' key={description}>{description}</li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="col-md-6">
-                            aaa
+                        <div className='col-lg-4'>
+                             <img src="image/chiangmai_university.jpg" alt="chiangmai_university" />
                         </div>
                     </div>
-
 
                     <hr />
                     <div className="button-bar text-center">
                         <span className='arrow'>
-                            <img src="card/arrow.svg" style={{rotate: "180deg"}} alt="<-" onClick={() => closing(1)}/>
-                            <span className='smalltext'>ย้อนกลับ</span>
+                            <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(1)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'ย้อนกลับ ' : 'Back'}
+                            </span>
                         </span>
                         <span className='smalltext mb-4'>2/3</span>
                         <span className='arrow'>
-                            <img src="card/arrow.svg" alt="->" onClick={() => nextcard(2)}/>
-                            <span className='smalltext'>ต่อไป</span>
+                            <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(2)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'ต่อไป ' : 'Next'}
+                            </span>
                         </span>
                     </div>
                 </div>
 
+
                 {/* 3 */}
                 <div className="card-modal container text-left">
-                    <div className='col-12'>
-                        <h1>{props.language=='TH' ? 'ประสบการณ์ทำงาน' : 'Work Experience'}</h1>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-6">
-                            aaa
+                    <h1>{props.language=='TH' ? 'ประวัติการทำงาน' : 'Work Experience'}</h1>
+                    <hr />
+                    <div className='row workexp-zone'>
+                        <div className='col-lg-8'>
+                            <ul className='education-data'>
+                                {getCard().education.map((data, index) => (
+                                    <li className='edublock' key={index}>
+                                        <h5>{data.qualification}</h5>
+                                        <p>{data.place}</p>
+                                        {data.description.length>0 && <hr />}
+                                        <ul>
+                                            {data.description.map((description, index) => (
+                                                <li className='smalltext' key={description}>{description}</li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="col-md-6">
-                            aaa
+                        <div className='col-lg-4'>
+                             <img src="image/chiangmai_university.jpg" alt="chiangmai_university" />
                         </div>
                     </div>
-                    
                     
                     <div className="button-bar text-center">
                         <span className='arrow'>
-                            <img src="card/arrow.svg" style={{rotate: "180deg"}} alt="<-" onClick={() => closing(2)}/>
-                            <span className='smalltext'>ย้อนกลับ</span>
+                            <img src={`card/arrow-${props.theme}.svg`} style={{rotate: "180deg"}} alt="<-" onClick={() => closing(2)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'ย้อนกลับ ' : 'Back'}
+                            </span>
                         </span>
                         <span className='smalltext mb-4'>3/3</span>
                         <span className='arrow'>
-                            <img src="card/arrow.svg" alt="->" onClick={() => nextcard(3)}/>
-                            <span className='smalltext'>ดูผลงาน</span>
+                            <img src={`card/arrow-${props.theme}.svg`} alt="->" onClick={() => nextcard(3)}/>
+                            <span className='smalltext'>
+                                {props.language=='TH' ? 'ดูผลงาน ' : 'My Portfolio'}
+                            </span>
                         </span>
                     </div>
                 </div>

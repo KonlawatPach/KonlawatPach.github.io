@@ -97,10 +97,41 @@ p, hr{
     }
     .card-component{
         hr{
-            border: 1px solid rgb(64, 64, 64);
+            border: 1px solid rgb(71, 71, 71);
         }
         .card-modal{
             background-color: #fffcf3;
+            border: solid 0.12em #826200;
+
+            .sameline{
+                color: black;
+            }
+            .sameline:hover{
+                color: white;
+                background-color: rgb(0, 1, 40);
+            }
+            .postit-box{
+                .postit-g{
+                    background-color: #EAFFEC;
+                    border: solid 0.1em #00630a;
+                }
+                .postit-p{
+                    background-color: #FCEAFF;
+                    border: solid 0.1em #5c006c;
+                }
+                .postit-b{
+                    background-color: #EAF5FF;
+                    border: solid 0.1em #004688;
+                }
+            }
+            .education-data{
+                .edublock{
+                    background-color: rgb(242, 232, 255);
+                }
+                .edublock:hover{
+                    background-color: rgb(222, 196, 255);
+                }
+            }
         }
     }
     .body{
@@ -158,10 +189,44 @@ p, hr{
     }
     .card-component{
         hr{
-            border: 1px solid rgb(110, 112, 133);
+            border: 1px solid rgb(222, 225, 255);
         }
         .card-modal{
             background-color: #1b0045;
+            border: 0.12em rgb(45, 0, 149) solid;
+            
+            .sameline{
+                color: rgb(255, 255, 255);
+            }
+            .sameline:hover{
+                color: rgb(0, 0, 0);
+                background-color: rgb(199, 200, 255);
+            }
+            .postit-box{
+                .postit-g{
+                    background-color: #002303;
+                    border: solid 0.1em #c8ffcd;
+                }
+                .postit-p{
+                    background-color: #2a0032;
+                    border: solid 0.1em #f8d3ff;
+                }
+                .postit-b{
+                    background-color: #002446;
+                    border: solid 0.1em #e4f2ff;
+                }
+            }
+            .button-bar{
+                color: rgb(255, 255, 255);
+            }
+        }
+        .education-data{
+            .edublock{
+                background-color: rgb(18, 0, 44);
+            }
+            .edublock:hover{
+                background-color: rgb(44, 0, 44);
+            }
         }
     }   
     .body{
