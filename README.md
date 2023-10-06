@@ -6,3 +6,11 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# Feature in my website
+- Having a theme in night mode and day mode in top-right of page.
+- Can switching between Thai Language and English Language in top-right of page..
+- Having interaction some object in my website.
+- Responsive website.
+
+## ** Don't forget to click in my personal card on the table **
